@@ -558,12 +558,12 @@ class lime_output
 
   public function info($message)
   {
-    echo $this->colorizer->colorize(sprintf('> %s', $message), 'INFO_BAR')."\n";
+    echo $this->colorizer->colorize(sprintf('# > %s', $message), 'INFO_BAR')."\n";
   }
 
   public function error($message)
   {
-    echo $this->colorizer->colorize(sprintf(' %s ', $message), 'RED_BAR')."\n";
+    echo $this->colorizer->colorize(sprintf('# %s ', $message), 'RED_BAR')."\n";
   }
 
   public function echoln($message, $colorizer_parameter = null, $colorize = true)
