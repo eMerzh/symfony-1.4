@@ -937,7 +937,7 @@ class Doctrine_Connection_UnitOfWork extends Doctrine_Connection_Module
                 $id = $record->$identifier;
             }
 
-            if ( ! $id) {
+            if ( ! $id && $id != 0) {
                 throw new Doctrine_Connection_Exception("Couldn't get last insert identifier.");
             }
             $record->assignIdentifier($id);
